@@ -1,4 +1,7 @@
 
+import Cover from "../../../public/images/dashboard/cover.jpg";
+import Profile from "../../../public/images/dashboard/profile.jpg";
+
 export default function ProfileCard() {
     return (
 
@@ -6,14 +9,14 @@ export default function ProfileCard() {
             {/* Cover Image */}
             <div className="relative">
                 <img
-                    src="/images/dashboard/cover.jpg"
+                    src={Cover}
                     alt="Cover"
                     className="w-full h-48 object-cover"
                 />
                 {/* Profile Image */}
                 <div className="absolute -bottom-12 left-6">
                     <img
-                        src="/images/dashboard/profile.jpg"
+                        src={Profile}
                         alt="Midhun"
                         className="w-35 h-35 rounded-full border-4 border-white dark:border-gray-800 object-cover"
                     />

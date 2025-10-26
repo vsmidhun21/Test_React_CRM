@@ -15,4 +15,5 @@ export default defineConfig({
       },
     }),
   ],
+  base: '/Test_React_CRM/',
 });

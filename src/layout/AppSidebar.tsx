@@ -29,7 +29,7 @@ const navItems: NavItem[] = [
   {
     icon: <GridIcon />,
     name: "Dashboard",
-    path: "/",
+    path: "/Test_React_CRM",
     // subItems: [{ name: "Ecommerce", path: "/", pro: false }],
   },
   {
