@@ -1,5 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
+import logo from "../../public/images/logo/logo.png";
+import logoDark from "../../public/images/logo/logo-dark.png";
+import logoIcon from "../../public/images/logo/logo-icon.png";
 
 // Assume these icons are imported from an icon library
 import {
@@ -309,14 +312,14 @@ const AppSidebar: React.FC = () => {
             <>
               <img
                 className="dark:hidden"
-                src="/images/logo/logo.svg"
+                src={logo}
                 alt="Logo"
                 width={150}
                 height={40}
               />
               <img
                 className="hidden dark:block"
-                src="/images/logo/logo-dark.svg"
+                src={logoDark}
                 alt="Logo"
                 width={150}
                 height={40}
@@ -324,7 +327,7 @@ const AppSidebar: React.FC = () => {
             </>
           ) : (
             <img
-              src="/images/logo/logo-icon.svg"
+              src={logoIcon}
               alt="Logo"
               width={32}
               height={32}
