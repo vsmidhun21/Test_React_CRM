@@ -1,5 +1,5 @@
 
-export default function EcommerceMetrics() {
+export default function ProfileCard() {
     return (
 
         <div className="w-full dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
