@@ -6,14 +6,14 @@ export default function ProfileCard() {
             {/* Cover Image */}
             <div className="relative">
                 <img
-                    src="../../../public/images/dashboard/cover.jpg"
+                    src="/images/dashboard/cover.jpg"
                     alt="Cover"
                     className="w-full h-48 object-cover"
                 />
                 {/* Profile Image */}
                 <div className="absolute -bottom-12 left-6">
                     <img
-                        src="../../../public/images/dashboard/profile.jpg"
+                        src="/images/dashboard/profile.jpg"
                         alt="Midhun"
                         className="w-35 h-35 rounded-full border-4 border-white dark:border-gray-800 object-cover"
                     />
