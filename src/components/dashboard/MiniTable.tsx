@@ -18,7 +18,7 @@ interface Product {
     variants: string;
     price: string;
     image: string; // URL or path to the product image
-    status: "Completed" | "On Progress" | "Planned"; // Status of the product
+    status: "Completed" | "Ongoing" | "Planned"; // Status of the product
 }
 
 // Define the table data using the interface
@@ -44,12 +44,12 @@ const tableData: Product[] = [
         name: "DevOps",
         variants: "2025",
         price: "Youtube",
-        status: "On Progress",
+        status: "Ongoing",
         image: Default,
     },
     {
         id: 4,
-        name: "Certified Ethical Hacker",
+        name: "CEH",
         variants: "2026",
         price: "Self Learning",
         status: "Planned",
@@ -128,7 +128,7 @@ export default function RecentOrders() {
                                         color={
                                             product.status === "Completed"
                                                 ? "success"
-                                                : product.status === "On Progress"
+                                                : product.status === "Ongoing"
                                                     ? "info"
                                                     : "warning"
                                         }

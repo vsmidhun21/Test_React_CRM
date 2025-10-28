@@ -6,7 +6,7 @@ export default function MonthlyTarget() {
     // const series = [73.33];
 
     const [series, setSeries] = useState([0]);
-    const [executedDays, setExe] = useState(null);
+    const [executedDays, setExe] = useState(0);
     useEffect(() => {
         const today = new Date();
         const year = today.getFullYear();
@@ -107,12 +107,12 @@ export default function MonthlyTarget() {
                         +1 Day
                     </span>
                 </div>
-                <p className="mx-auto mt-10 w-full max-w-[380px] text-center text-sm text-gray-500 sm:text-base">
-                    1 Day higher than last month. Keep up your good work!
+                <p className="mx-auto mt-5 w-full max-w-[380px] text-center text-sm text-gray-500 sm:text-base">
+                    1 Day higher than last month. Keep up good work!
                 </p>
             </div>
 
-            <div className="flex items-center justify-center gap-5 px-6 py-3.5 sm:gap-8 sm:py-5">
+            <div className="flex items-center justify-center gap-5 px-6 py-1 sm:gap-8 sm:py-5">
                 <div>
                     <p className="mb-1 text-center text-gray-500 text-theme-xs dark:text-gray-400 sm:text-sm">
                         Target
