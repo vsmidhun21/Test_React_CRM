@@ -9,6 +9,7 @@ import ProfileCard from "../../components/dashboard/ProfileCard";
 import Counts from "../../components/dashboard/ProjectCounts";
 import SkillSetCharts from "../../components/dashboard/SkillSetChart";
 import Targets from "../../components/dashboard/Targets";
+import MiniTable from "../../components/dashboard/MiniTable";
 
 export default function Home() {
   return (
@@ -30,9 +31,12 @@ export default function Home() {
           <SkillSetCharts />
         </div>
 
-
         <div className="col-span-12 xl:col-span-5">
           <Targets />
+        </div>
+
+        <div className="col-span-12 xl:col-span-7">
+          <MiniTable />
         </div>
 
         {/* <div className="col-span-12">
@@ -43,9 +47,7 @@ export default function Home() {
           <DemographicCard />
         </div> */}
 
-        {/* <div className="col-span-12 xl:col-span-7">
-          <RecentOrders />
-        </div> */}
+        
       </div>
     </>
   );

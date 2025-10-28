@@ -1,8 +1,37 @@
 import Chart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
+import { useEffect, useState } from "react";
 
 export default function MonthlyTarget() {
-    const series = [73.33];
+    // const series = [73.33];
+
+    const [series, setSeries] = useState([0]);
+    const [executedDays, setExe] = useState(null);
+    useEffect(() => {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = today.getMonth(); // 0-based index (0 = January)
+
+        // const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const targetDays = 30;
+
+        let executedDays = 0;
+
+        for (let day = 1; day <= today.getDate(); day++) {
+            const date = new Date(year, month, day);
+            const dayOfWeek = date.getDay(); // 0 = Sunday, 6 = Saturday
+
+            if (dayOfWeek != 0) {
+                executedDays++;
+            }
+        }
+
+        setExe(executedDays);
+
+        const percent = ((executedDays / targetDays) * 100).toFixed(2);
+        setSeries([parseFloat(percent)]);
+    }, []);
+
     const options: ApexOptions = {
         colors: ["#465FFF"],
         chart: {
@@ -100,7 +129,7 @@ export default function MonthlyTarget() {
                         Completed
                     </p>
                     <p className="flex items-center justify-center gap-1 text-base font-semibold text-gray-800 dark:text-white/90 sm:text-lg">
-                        22 Days
+                        {executedDays} Days
                         <svg
                             width="16"
                             height="16"

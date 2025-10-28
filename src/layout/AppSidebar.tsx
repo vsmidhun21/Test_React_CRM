@@ -307,7 +307,7 @@ const AppSidebar: React.FC = () => {
           !isExpanded && !isHovered ? "lg:justify-center" : "justify-start"
         }`}
       >
-        <Link to="/">
+        <Link to="/Test_React_CRM">
           {isExpanded || isHovered || isMobileOpen ? (
             <>
               <img
